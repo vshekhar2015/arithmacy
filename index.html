@@ -34,10 +34,10 @@
 		function changePicture(imgTag){
 			console.log(imgTag)
 			var imgSrc = imgTag.src
-			if(imgTag.scr = "1.jpg")
-				document.getElementById("mainImg").src="2.jpg";
-			 if(imgTag.scr = "2.jpg"){
-				document.getElementById("mainImg").src="3.jpg";
+			if(imgSrc == img1)
+				document.getElementById("mainImg").src=img2;
+			else if(imgSrc== img2){
+				document.getElementById("mainImg").src=img3;
 				document.getElementById("enterYourName").hidden=false;
 				document.getElementById("allies").hidden=false;
 			}
@@ -210,12 +210,16 @@ var decodedValues = [
 		8695,
 		39655
 	]
+
+	var img1 = 'https://raw.githubusercontent.com/vshekhar2015/arithmacy/main/1.jpg'
+	var img2 = 'https://raw.githubusercontent.com/vshekhar2015/arithmacy/main/2.jpg'
+	var img3 = 'https://raw.githubusercontent.com/vshekhar2015/arithmacy/main/3.jpg'
 		
 	</script>
 </head>
 
 <body>
-	<img id="mainImg" onclick="changePicture(this)" src="1.jpg" />
+	<img id="mainImg" onclick="changePicture(this)" src="https://raw.githubusercontent.com/vshekhar2015/arithmacy/main/1.jpg" />
 	<div id="entry">
 		<input type="text" oninput="decodeName(this)" hidden=true name="" id="enterYourName">
 		<h2 id="codeOutput">&nbsp;</h2>
